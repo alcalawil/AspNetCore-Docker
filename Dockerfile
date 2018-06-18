@@ -2,7 +2,7 @@ FROM microsoft/aspnetcore:2.0
 
 WORKDIR /app
 
-COPY ./publish .
+COPY ./src/AspMVC/publish .
 
-ENTRYPOINT ["dotnet", "docker-tutorial.dll"]
+ENTRYPOINT ["dotnet", "AspMVC.dll"]
    
