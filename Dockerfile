@@ -1,13 +1,8 @@
-    FROM microsoft/aspnetcore:2.0
+FROM microsoft/aspnetcore:2.0
 
-    WORKDIR /app
+WORKDIR /app
 
-    COPY /src/AspMVC .
+COPY ./publish .
 
-    RUN dotnet restore
-
-    RUN dotnet run
-
-    WORKDIR     
-
-    ENTRYPOINT dotnet run
+ENTRYPOINT ["dotnet", "docker-tutorial.dll"]
+   
